@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include "ofConstants.h"
+
 #if defined(TARGET_OSX)
 #   define LINK_PLATFORM_MACOSX 1
 #elif defined(TARGET_LINUX)
@@ -47,6 +49,12 @@ namespace ofx {
             });
             ofAddListener(ofEvents().update, this, &AbletonLink::update, OF_EVENT_ORDER_BEFORE_APP);
         };
+        
+        void setup(double bpm = 120.0, double quantum = 4.0, bool enable = true) {
+            setBPM(bpm);
+            setQuantum(quantum);
+            setLinkEnable(enable);
+        }
         
         bool isLinkEnabled() const { return link.isEnabled(); }
         void setLinkEnable(bool enable) { link.enable(enable); }
