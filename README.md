@@ -1,6 +1,6 @@
 # ofxAbletonLink
 
-[Ableton Link](https://github.com/Ableton/link) addon for [openFrameowkrs](https://github.com/openframeworks/openFrameworks)
+[Ableton Link](https://www.ableton.com/ja/link/) addon for [openFrameowkrs](http://openframeworks.cc)
 
 ## Test
 
@@ -35,7 +35,9 @@ MIT License.
 
 ## Dependencies license
 
-### ableton link
+### [Ableton Link](https://www.ableton.com/link/)
+
+* [Ableton/link](https://github.com/Ableton/link)
 
 GNU GPL v2.0
 
@@ -59,8 +61,12 @@ If you would like to incorporate Link into a proprietary software application,
 please contact <link-devs@ableton.com>.
 ```
 
-### asio-standalone
-### catch
+### [asio](http://think-async.com/Asio/AsioStandalone)
+
+### [Catch](https://github.com/philsquared/Catch)
+
+* [chriskohlhoff/asio](https://github.com/chriskohlhoff/asio)
+* [philsquared/Catch](https://github.com/philsquared/Catch)
 
 boost v1.0
 
