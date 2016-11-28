@@ -50,6 +50,12 @@ namespace ofx {
             ofAddListener(ofEvents().update, this, &AbletonLink::update, OF_EVENT_ORDER_BEFORE_APP);
         };
         
+        void setup(double bpm = 120.0, double quantum = 4.0, bool enable = true) {
+            setBPM(bpm);
+            setQuantum(quantum);
+            setLinkEnable(enable);
+        }
+        
         bool isLinkEnabled() const { return link.isEnabled(); }
         void setLinkEnable(bool enable) { link.enable(enable); }
         void enableLink() { link.enable(true); }
