@@ -3,25 +3,39 @@
 
 class ofApp : public ofBaseApp {
     ofxAbletonLink link;
+    
+    void bpmChanged(double &bpm) {
+        ofLogNotice("bpmChanged") << bpm;
+    }
+    
+    void numPeersChanged(std::size_t &peers) {
+        ofLogNotice("numPeersChanged") << peers;
+    }
 public:
     void setup() {
-        ofSetColor(255, 0, 0);
         ofSetBackgroundColor(0, 0, 0);
+        ofSetVerticalSync(true);
+        ofSetFrameRate(60);
+        ofAddListener(link.bpmChanged, this, &ofApp::bpmChanged);
+        ofAddListener(link.numPeersChanged, this, &ofApp::numPeersChanged);
     }
-    void update() {
-        ofLogNotice()
+    
+    void draw() {
+        float x = ofGetWidth() * link.getPhase() / link.getQuantum();
+        
+        ofSetColor(255, 0, 0);
+        ofDrawLine(x, 0, x, ofGetHeight());
+        
+        std::stringstream ss("");
+        ss
             << "bpm:   " << link.getBPM() << std::endl
             << "beat:  " << link.getBeat() << std::endl
             << "phase: " << link.getPhase() << std::endl
             << "peers: " << link.getNumPeers() << std::endl;
+        
+        ofSetColor(255);
+        ofDrawBitmapString(ss.str(), 20, 20);
     }
-    void draw() {
-        float x = ofGetWidth() * link.getPhase() / link.getQuantum();
-        ofDrawLine(x, 0, x, ofGetHeight());
-    }
-    
-    void exit() {}
-    
     void keyPressed(int key) {
         if(key == OF_KEY_LEFT) {
             if(20 < link.getBPM()) link.setBPM(link.getBPM() - 1.0);
