@@ -50,6 +50,6 @@ public:
 };
 
 int main() {
-    ofSetupOpenGL(1280, 720, OF_WINDOW);
+    ofSetupOpenGL(320, 320, OF_WINDOW);
     ofRunApp(new ofApp);
 }
