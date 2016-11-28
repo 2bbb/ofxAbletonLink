@@ -7,6 +7,14 @@
 
 #pragma once
 
+#if defined(TARGET_OSX)
+#   define LINK_PLATFORM_MACOSX 1
+#elif defined(TARGET_LINUX)
+#   define LINK_PLATFORM_LINUX 1
+#else
+#   define LINK_PLATFORM_WINDOWS 1
+#endif
+
 #include <ableton/Link.hpp>
 #include "ofEvent.h"
 #include "ofEvents.h"

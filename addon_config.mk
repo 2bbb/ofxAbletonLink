@@ -54,13 +54,21 @@ common:
 	# in the src folders in libs and the root of the addon. if your addon needs
 	# to include files in different places or a different set of files per platform
 	# they can be specified here
-	# ADDON_SOURCES  =
-	
+	ADDON_SOURCES  =  src/ofxAbletonLink.h
+
 	# some addons need resources to be copied to the bin/data folder of the project
 	# specify here any files that need to be copied, you can use wildcards like * and ?
 	# ADDON_DATA = 
 	
 	# when parsing the file system looking for libraries exclude this for all or
 	# a specific platform
-	# ADDON_LIBS_EXCLUDE =
-	
+	# ADDON_LIBS_EXCLUDE  =
+
+#osx:
+#	ADDON_CFLAGS += -DLINK_PLATFORM_MACOSX=1
+
+#linux:
+#	ADDON_CFLAGS += -DLINK_PLATFORM_LINUX=1
+
+#windows:
+#	ADDON_CFLAGS += -DLINK_PLATFORM_WINDOWS=1
