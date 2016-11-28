@@ -1,6 +1,6 @@
 # ofxAbletonLink
 
-ableton link for oF
+[Ableton Link](https://github.com/Ableton/link) addon for [openFrameowkrs](https://github.com/openframeworks/openFrameworks)
 
 ## Test
 
