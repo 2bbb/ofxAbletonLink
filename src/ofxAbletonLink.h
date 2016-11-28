@@ -1,5 +1,5 @@
 //
-//  ofxOscPublisher.h
+//  ofxAbletonLink.h
 //
 //  Created by ISHII 2bit on 2016/11/28.
 //
