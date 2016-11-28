@@ -19,13 +19,18 @@ namespace ofx {
         double phase{0.0};
         double bpm{120.0};
         double quantum{4.0};
+        
     public:
         ofEvent<double> bpmChanged;
         ofEvent<std::size_t> numPeersChanged;
         
-        AbletonLink()
-        : link(120.0f) {
-            link.enable(true);
+        AbletonLink(double bpm = 120.0, double quantum = 4.0, bool enable = true)
+        : link(bpm)
+        , bpm(bpm)
+        , quantum(quantum)
+        {
+            link.enable(enable);
+            
             link.setTempoCallback([&](double bpm) {
                 ofNotifyEvent(bpmChanged, bpm);
             });
@@ -34,6 +39,11 @@ namespace ofx {
             });
             ofAddListener(ofEvents().update, this, &AbletonLink::update, OF_EVENT_ORDER_BEFORE_APP);
         };
+        
+        bool isLinkEnabled() const { return link.isEnabled(); }
+        void setLinkEnable(bool enable) { link.enable(enable); }
+        void enableLink() { link.enable(true); }
+        void disableLink() { link.enable(false); }
         
         double getBeat() const { return beat; }
         void setBeat(double beat) {
