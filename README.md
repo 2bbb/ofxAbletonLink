@@ -15,6 +15,16 @@ git clone git@github.com:2bbb/ofxAbletonLink.git
 git submodule update --init --recursive
 ```
 
+### if you don't use ProjectGenerator
+
+* add header search path
+	* ofxAbletonLink/libs/link/include
+	* ofxAbletonLink/libs/link/modules/asio-standalone/asio/include
+	* ofxAbletonLink/libs/link/modules/catch/include
+* add project
+	* ofxAbletonLink/src/ofxAbletonLink.h
+	* __!!! DON'T add other files to project__
+
 ## Update histor
 
 ### 2016/11/28 ver 0.0.1
