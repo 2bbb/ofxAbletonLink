@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include "ofConstants.h"
+
 #if defined(TARGET_OSX)
 #   define LINK_PLATFORM_MACOSX 1
 #elif defined(TARGET_LINUX)
