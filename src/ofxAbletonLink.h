@@ -32,7 +32,7 @@ namespace ofx {
             link.setNumPeersCallback([&](std::size_t peers) {
                 ofNotifyEvent(numPeersChanged, peers);
             });
-            ofAddListener(ofEvents().update, this, &AbletonLink::update);
+            ofAddListener(ofEvents().update, this, &AbletonLink::update, OF_EVENT_ORDER_BEFORE_APP);
         };
         
         double getBeat() const { return beat; }
