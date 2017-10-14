@@ -18,12 +18,12 @@ git submodule update --init --recursive
 ### if you don't use ProjectGenerator
 
 * add header search path
-	* ofxAbletonLink/libs/link/include
-	* ofxAbletonLink/libs/link/modules/asio-standalone/asio/include
-	* ofxAbletonLink/libs/link/modules/catch/include
+  * ofxAbletonLink/libs/link/include
+  * ofxAbletonLink/libs/link/modules/asio-standalone/asio/include
+  * ofxAbletonLink/libs/link/modules/catch/include
 * add project
-	* ofxAbletonLink/src/ofxAbletonLink.h
-	* __!!! DON'T add other files to project__
+  * ofxAbletonLink/src/ofxAbletonLink.h
+  * __!!! DON'T add other files to project__
 
 ## Update histor
 
@@ -100,3 +100,7 @@ DEALINGS IN THE SOFTWARE.
 
 * ISHII 2bit [bufferRenaiss co., ltd.]
 * ishii[at]buffer-renaiss.com
+
+## Contributor
+
+* [hiroMTB](https://github.com/hiromtb)
