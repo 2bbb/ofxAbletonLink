@@ -21,12 +21,15 @@ git submodule update --init --recursive
 * add header search path
   * ofxAbletonLink/libs/link/include
   * ofxAbletonLink/libs/link/modules/asio-standalone/asio/include
-  * ofxAbletonLink/libs/link/modules/catch/include
 * add project
   * ofxAbletonLink/src/ofxAbletonLink.h
   * __!!! DON'T add other files to project__
 
 ## Update histor
+
+### 2018/05/21 ver 0.0.2
+
+* update version of ableton link to 3.0.1
 
 ### 2016/11/28 ver 0.0.1
 
