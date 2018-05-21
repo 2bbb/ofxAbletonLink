@@ -9,7 +9,7 @@
 
 #include "ofConstants.h"
 
-#if defined(TARGET_OSX)
+#if defined(TARGET_OSX) || defined(TARGET_OF_IOS)
 #   define LINK_PLATFORM_MACOSX 1
 #elif defined(TARGET_LINUX)
 #   define LINK_PLATFORM_LINUX 1

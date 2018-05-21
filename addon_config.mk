@@ -20,8 +20,8 @@ meta:
 	ADDON_AUTHOR = ISHII 2bit
 	ADDON_TAGS = "network"
 	ADDON_URL = http://github.com/2bbb/ofxAbletonLink
-	ADDON_GIT_URL = git://github.com/2bbb/ofxAbletonLink.git
-	ADDON_MINIMUM_OF_VERSION = 0.9.6
+	# ADDON_GIT_URL = git://github.com/2bbb/ofxAbletonLink.git
+	# ADDON_MINIMUM_OF_VERSION = 0.9.6
 
 common:
 	# dependencies with other addons, a list of them separated by spaces 
@@ -33,7 +33,7 @@ common:
 	# specified here separated by spaces or one per line using +=
 	ADDON_INCLUDES = src
 	ADDON_INCLUDES += libs/link/include
-       	ADDON_INCLUDES += libs/link/include/ableton
+	ADDON_INCLUDES += libs/link/include/ableton
 	ADDON_INCLUDES += libs/link/modules/asio-standalone/asio/include
 	
 	# any special flag that should be passed to the compiler when using this
