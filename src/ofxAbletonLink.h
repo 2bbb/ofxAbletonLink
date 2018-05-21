@@ -64,30 +64,30 @@ namespace ofx {
         double getBeat() const { return beat; }
         void setBeat(double beat) {
             const auto time = link.clock().micros();
-            auto timeline = link.captureAppTimeline();
-            timeline.requestBeatAtTime(beat, time, quantum);
-            link.commitAppTimeline(timeline);
+            auto session_state = link.captureAppSessionState();
+            session_state.requestBeatAtTime(beat, time, quantum);
+            link.commitAppSessionState(session_state);
         }
         void setBeatForce(double beat) {
             const auto time = link.clock().micros();
-            auto timeline = link.captureAppTimeline();
-            timeline.forceBeatAtTime(beat, time, quantum);
-            link.commitAppTimeline(timeline);
+            auto session_state = link.captureAppSessionState();
+            session_state.forceBeatAtTime(beat, time, quantum);
+            link.commitAppSessionState(session_state);
         }
         
         double getPhase() const { return phase; }
         void setPhase(double phase) {
             const auto time = link.clock().micros();
-            auto timeline = link.captureAppTimeline();
+            auto session_state = link.captureAppSessionState();
         }
         
         double getBPM() const { return bpm; }
         void setBPM(double bpm) {
             this->bpm = bpm;
             const auto time = link.clock().micros();
-            auto timeline = link.captureAppTimeline();
-            timeline.setTempo(bpm, time);
-            link.commitAppTimeline(timeline);
+            auto session_state = link.captureAppSessionState();
+            session_state.setTempo(bpm, time);
+            link.commitAppSessionState(session_state);
         }
         
         std::size_t getNumPeers() const { return link.numPeers(); }
@@ -98,11 +98,11 @@ namespace ofx {
     private:
         void update(ofEventArgs &) {
             const auto time = link.clock().micros();
-            auto timeline = link.captureAppTimeline();
+            auto session_state = link.captureAppSessionState();
             
-            beat = timeline.beatAtTime(time, quantum);
-            phase = timeline.phaseAtTime(time, quantum);
-            bpm = timeline.tempo();
+            beat = session_state.beatAtTime(time, quantum);
+            phase = session_state.phaseAtTime(time, quantum);
+            bpm = session_state.tempo();
         };
     };
 };

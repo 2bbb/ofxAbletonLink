@@ -18,7 +18,7 @@ meta:
 	ADDON_NAME = ofxAbletonLink
 	ADDON_DESCRIPTION = Addon for use ableton link in oF
 	ADDON_AUTHOR = ISHII 2bit
-	ADDON_TAGS = "network"
+	ADDON_TAGS = "network" "sound" "ableton live"
 	ADDON_URL = http://github.com/2bbb/ofxAbletonLink
 	# ADDON_GIT_URL = git://github.com/2bbb/ofxAbletonLink.git
 	# ADDON_MINIMUM_OF_VERSION = 0.9.6
@@ -31,7 +31,7 @@ common:
 	# include search paths, this will be usually parsed from the file system
 	# but if the addon or addon libraries need special search paths they can be
 	# specified here separated by spaces or one per line using +=
-	ADDON_INCLUDES = src
+	ADDON_INCLUDES  = src
 	ADDON_INCLUDES += libs/link/include
 	ADDON_INCLUDES += libs/link/include/ableton
 	ADDON_INCLUDES += libs/link/modules/asio-standalone/asio/include
@@ -70,20 +70,22 @@ common:
 	ADDON_SOURCES_EXCLUDE = libs/link/%
 
 #osx:
-	#ADDON_CFLAGS += -DLINK_PLATFORM_MACOSX=1
+	#ADDON_DEFINES = -DLINK_PLATFORM_MACOSX=1
 
 #linux:
-	#ADDON_CFLAGS += -DLINK_PLATFORM_LINUX=1
+	#ADDON_DEFINES = -DLINK_PLATFORM_LINUX=1
 
 #linuxarmv6l:
-	#ADDON_CFLAGS += -DLINK_PLATFORM_LINUX=1
+	#ADDON_DEFINES = -DLINK_PLATFORM_LINUX=1
 
 #linuxarmv7l:
-	#ADDON_CFLAGS += -DLINK_PLATFORM_LINUX=1
+	#ADDON_DEFINES = -DLINK_PLATFORM_LINUX=1
 
 #win_cb:
+	#ADDON_DEFINES = -DLINK_PLATFORM_WINDOWS=1
+
 #windows:
-	#ADDON_CFLAGS += -DLINK_PLATFORM_WINDOWS=1
+	#ADDON_DEFINES = -DLINK_PLATFORM_WINDOWS=1
 
 
 #android/armeabi:
