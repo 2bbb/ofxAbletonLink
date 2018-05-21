@@ -12,6 +12,7 @@
 
 ```
 git clone git@github.com:2bbb/ofxAbletonLink.git
+cd ofxAbletonLink
 git submodule update --init --recursive
 ```
 
