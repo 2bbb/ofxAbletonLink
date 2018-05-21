@@ -41,74 +41,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		956985691DEC2128005D2499 /* InterfaceScanner.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = InterfaceScanner.hpp; sourceTree = "<group>"; };
-		9569856A1DEC2128005D2499 /* IpV4Interface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IpV4Interface.hpp; sourceTree = "<group>"; };
-		9569856B1DEC2128005D2499 /* MessageTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MessageTypes.hpp; sourceTree = "<group>"; };
-		9569856C1DEC2128005D2499 /* NetworkByteStreamSerializable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NetworkByteStreamSerializable.hpp; sourceTree = "<group>"; };
-		9569856D1DEC2128005D2499 /* Payload.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Payload.hpp; sourceTree = "<group>"; };
-		9569856E1DEC2128005D2499 /* PeerGateway.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PeerGateway.hpp; sourceTree = "<group>"; };
-		9569856F1DEC2128005D2499 /* PeerGateways.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PeerGateways.hpp; sourceTree = "<group>"; };
-		956985701DEC2128005D2499 /* Service.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Service.hpp; sourceTree = "<group>"; };
-		956985711DEC2128005D2499 /* Socket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Socket.hpp; sourceTree = "<group>"; };
-		956985731DEC2128005D2499 /* Interface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Interface.hpp; sourceTree = "<group>"; };
-		956985741DEC2128005D2499 /* PayloadEntries.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PayloadEntries.hpp; sourceTree = "<group>"; };
-		956985751DEC2128005D2499 /* Socket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Socket.hpp; sourceTree = "<group>"; };
-		956985761DEC2128005D2499 /* UdpMessenger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UdpMessenger.hpp; sourceTree = "<group>"; };
-		956985781DEC2128005D2499 /* Messages.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Messages.hpp; sourceTree = "<group>"; };
-		9569857A1DEC2128005D2499 /* Beats.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Beats.hpp; sourceTree = "<group>"; };
-		9569857B1DEC2128005D2499 /* ClientSessionTimelines.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ClientSessionTimelines.hpp; sourceTree = "<group>"; };
-		9569857C1DEC2128005D2499 /* Controller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
-		9569857D1DEC2128005D2499 /* Gateway.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Gateway.hpp; sourceTree = "<group>"; };
-		9569857E1DEC2128005D2499 /* GhostXForm.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GhostXForm.hpp; sourceTree = "<group>"; };
-		9569857F1DEC2128005D2499 /* HostTimeFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HostTimeFilter.hpp; sourceTree = "<group>"; };
-		956985801DEC2128005D2499 /* Kalman.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Kalman.hpp; sourceTree = "<group>"; };
-		956985811DEC2128005D2499 /* LinearRegression.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinearRegression.hpp; sourceTree = "<group>"; };
-		956985821DEC2128005D2499 /* Measurement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Measurement.hpp; sourceTree = "<group>"; };
-		956985831DEC2128005D2499 /* MeasurementEndpointV4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MeasurementEndpointV4.hpp; sourceTree = "<group>"; };
-		956985841DEC2128005D2499 /* MeasurementService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MeasurementService.hpp; sourceTree = "<group>"; };
-		956985851DEC2128005D2499 /* NodeId.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NodeId.hpp; sourceTree = "<group>"; };
-		956985861DEC2128005D2499 /* NodeState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NodeState.hpp; sourceTree = "<group>"; };
-		956985871DEC2128005D2499 /* PayloadEntries.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PayloadEntries.hpp; sourceTree = "<group>"; };
-		956985881DEC2128005D2499 /* Peers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Peers.hpp; sourceTree = "<group>"; };
-		956985891DEC2128005D2499 /* PeerState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PeerState.hpp; sourceTree = "<group>"; };
-		9569858A1DEC2128005D2499 /* Phase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Phase.hpp; sourceTree = "<group>"; };
-		9569858B1DEC2128005D2499 /* PingResponder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PingResponder.hpp; sourceTree = "<group>"; };
-		9569858C1DEC2128005D2499 /* SessionId.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SessionId.hpp; sourceTree = "<group>"; };
-		9569858D1DEC2128005D2499 /* Sessions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sessions.hpp; sourceTree = "<group>"; };
-		9569858E1DEC2128005D2499 /* Tempo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tempo.hpp; sourceTree = "<group>"; };
-		9569858F1DEC2128005D2499 /* Timeline.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Timeline.hpp; sourceTree = "<group>"; };
-		956985911DEC2128005D2499 /* Messages.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Messages.hpp; sourceTree = "<group>"; };
-		956985921DEC2128005D2499 /* Link.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Link.hpp; sourceTree = "<group>"; };
-		956985931DEC2128005D2499 /* Link.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Link.ipp; sourceTree = "<group>"; };
-		956985961DEC2128005D2499 /* AsioService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AsioService.hpp; sourceTree = "<group>"; };
-		956985971DEC2128005D2499 /* AsioTimer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AsioTimer.hpp; sourceTree = "<group>"; };
-		956985981DEC2128005D2499 /* AsioWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AsioWrapper.hpp; sourceTree = "<group>"; };
-		956985991DEC2128005D2499 /* Context.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Context.hpp; sourceTree = "<group>"; };
-		9569859A1DEC2128005D2499 /* PooledHandlerContext.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PooledHandlerContext.hpp; sourceTree = "<group>"; };
-		9569859B1DEC2128005D2499 /* Socket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Socket.hpp; sourceTree = "<group>"; };
-		9569859C1DEC2128005D2499 /* Util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Util.hpp; sourceTree = "<group>"; };
-		9569859D1DEC2128005D2499 /* Config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Config.hpp; sourceTree = "<group>"; };
-		9569859F1DEC2128005D2499 /* Clock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Clock.hpp; sourceTree = "<group>"; };
-		956985A01DEC2128005D2499 /* Darwin.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Darwin.hpp; sourceTree = "<group>"; };
-		956985A21DEC2128005D2499 /* Linux.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Linux.hpp; sourceTree = "<group>"; };
-		956985A41DEC2128005D2499 /* ScanIpIfAddrs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScanIpIfAddrs.hpp; sourceTree = "<group>"; };
-		956985A61DEC2128005D2499 /* Clock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Clock.hpp; sourceTree = "<group>"; };
-		956985A81DEC2128005D2499 /* Clock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Clock.hpp; sourceTree = "<group>"; };
-		956985A91DEC2128005D2499 /* ScanIpIfAddrs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScanIpIfAddrs.hpp; sourceTree = "<group>"; };
-		956985AB1DEC2128005D2499 /* CatchWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CatchWrapper.hpp; sourceTree = "<group>"; };
-		956985AD1DEC2128005D2499 /* Context.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Context.hpp; sourceTree = "<group>"; };
-		956985AE1DEC2128005D2499 /* Fixture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Fixture.hpp; sourceTree = "<group>"; };
-		956985AF1DEC2128005D2499 /* SchedulerTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SchedulerTree.hpp; sourceTree = "<group>"; };
-		956985B01DEC2128005D2499 /* Socket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Socket.hpp; sourceTree = "<group>"; };
-		956985B11DEC2128005D2499 /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
-		956985B31DEC2128005D2499 /* Injected.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Injected.hpp; sourceTree = "<group>"; };
-		956985B41DEC2128005D2499 /* Log.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Log.hpp; sourceTree = "<group>"; };
-		956985B51DEC2128005D2499 /* SafeAsyncHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SafeAsyncHandler.hpp; sourceTree = "<group>"; };
-		956985B61DEC2128005D2499 /* SampleTiming.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SampleTiming.hpp; sourceTree = "<group>"; };
-		956985B81DEC2128005D2499 /* IoService.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IoService.hpp; sourceTree = "<group>"; };
-		956985B91DEC2128005D2499 /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
-		95698B031DEC212B005D2499 /* ofxAbletonLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAbletonLink.h; sourceTree = "<group>"; };
-		95698F851DEC4106005D2499 /* ofxAbletonLinkThreaded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxAbletonLinkThreaded.h; sourceTree = "<group>"; };
+		0B3F55C3B1770A3F48090C5E /* ofxAbletonLink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAbletonLink.h; path = ../../../addons/ofxAbletonLink/src/ofxAbletonLink.h; sourceTree = SOURCE_ROOT; };
+		55247C2E2C692B3C409EED04 /* ofxAbletonLinkThreaded.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAbletonLinkThreaded.h; path = ../../../addons/ofxAbletonLink/src/ofxAbletonLinkThreaded.h; sourceTree = SOURCE_ROOT; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* ofxAbletonLinkExampleDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ofxAbletonLinkExampleDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
@@ -136,256 +70,29 @@
 			name = local_addons;
 			sourceTree = "<group>";
 		};
-		9569852C1DEC2128005D2499 /* ofxAbletonLink */ = {
+		8E42EE2029E05B360C7CC1FC /* ofxAbletonLink */ = {
 			isa = PBXGroup;
 			children = (
-				9569852F1DEC2128005D2499 /* libs */,
-				95698B011DEC212B005D2499 /* src */,
+				D4273D1F7CFE8F39BD43AFB4 /* src */,
 			);
 			name = ofxAbletonLink;
-			path = ../../../addons/ofxAbletonLink;
-			sourceTree = "<group>";
-		};
-		9569852F1DEC2128005D2499 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				956985301DEC2128005D2499 /* link */,
-			);
-			path = libs;
-			sourceTree = "<group>";
-		};
-		956985301DEC2128005D2499 /* link */ = {
-			isa = PBXGroup;
-			children = (
-				956985661DEC2128005D2499 /* include */,
-			);
-			path = link;
-			sourceTree = "<group>";
-		};
-		956985661DEC2128005D2499 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				956985671DEC2128005D2499 /* ableton */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		956985671DEC2128005D2499 /* ableton */ = {
-			isa = PBXGroup;
-			children = (
-				956985681DEC2128005D2499 /* discovery */,
-				956985791DEC2128005D2499 /* link */,
-				956985921DEC2128005D2499 /* Link.hpp */,
-				956985931DEC2128005D2499 /* Link.ipp */,
-				956985941DEC2128005D2499 /* platforms */,
-				956985AA1DEC2128005D2499 /* test */,
-				956985B21DEC2128005D2499 /* util */,
-			);
-			path = ableton;
-			sourceTree = "<group>";
-		};
-		956985681DEC2128005D2499 /* discovery */ = {
-			isa = PBXGroup;
-			children = (
-				956985691DEC2128005D2499 /* InterfaceScanner.hpp */,
-				9569856A1DEC2128005D2499 /* IpV4Interface.hpp */,
-				9569856B1DEC2128005D2499 /* MessageTypes.hpp */,
-				9569856C1DEC2128005D2499 /* NetworkByteStreamSerializable.hpp */,
-				9569856D1DEC2128005D2499 /* Payload.hpp */,
-				9569856E1DEC2128005D2499 /* PeerGateway.hpp */,
-				9569856F1DEC2128005D2499 /* PeerGateways.hpp */,
-				956985701DEC2128005D2499 /* Service.hpp */,
-				956985711DEC2128005D2499 /* Socket.hpp */,
-				956985721DEC2128005D2499 /* test */,
-				956985761DEC2128005D2499 /* UdpMessenger.hpp */,
-				956985771DEC2128005D2499 /* v1 */,
-			);
-			path = discovery;
-			sourceTree = "<group>";
-		};
-		956985721DEC2128005D2499 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				956985731DEC2128005D2499 /* Interface.hpp */,
-				956985741DEC2128005D2499 /* PayloadEntries.hpp */,
-				956985751DEC2128005D2499 /* Socket.hpp */,
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
-		956985771DEC2128005D2499 /* v1 */ = {
-			isa = PBXGroup;
-			children = (
-				956985781DEC2128005D2499 /* Messages.hpp */,
-			);
-			path = v1;
-			sourceTree = "<group>";
-		};
-		956985791DEC2128005D2499 /* link */ = {
-			isa = PBXGroup;
-			children = (
-				9569857A1DEC2128005D2499 /* Beats.hpp */,
-				9569857B1DEC2128005D2499 /* ClientSessionTimelines.hpp */,
-				9569857C1DEC2128005D2499 /* Controller.hpp */,
-				9569857D1DEC2128005D2499 /* Gateway.hpp */,
-				9569857E1DEC2128005D2499 /* GhostXForm.hpp */,
-				9569857F1DEC2128005D2499 /* HostTimeFilter.hpp */,
-				956985801DEC2128005D2499 /* Kalman.hpp */,
-				956985811DEC2128005D2499 /* LinearRegression.hpp */,
-				956985821DEC2128005D2499 /* Measurement.hpp */,
-				956985831DEC2128005D2499 /* MeasurementEndpointV4.hpp */,
-				956985841DEC2128005D2499 /* MeasurementService.hpp */,
-				956985851DEC2128005D2499 /* NodeId.hpp */,
-				956985861DEC2128005D2499 /* NodeState.hpp */,
-				956985871DEC2128005D2499 /* PayloadEntries.hpp */,
-				956985881DEC2128005D2499 /* Peers.hpp */,
-				956985891DEC2128005D2499 /* PeerState.hpp */,
-				9569858A1DEC2128005D2499 /* Phase.hpp */,
-				9569858B1DEC2128005D2499 /* PingResponder.hpp */,
-				9569858C1DEC2128005D2499 /* SessionId.hpp */,
-				9569858D1DEC2128005D2499 /* Sessions.hpp */,
-				9569858E1DEC2128005D2499 /* Tempo.hpp */,
-				9569858F1DEC2128005D2499 /* Timeline.hpp */,
-				956985901DEC2128005D2499 /* v1 */,
-			);
-			path = link;
-			sourceTree = "<group>";
-		};
-		956985901DEC2128005D2499 /* v1 */ = {
-			isa = PBXGroup;
-			children = (
-				956985911DEC2128005D2499 /* Messages.hpp */,
-			);
-			path = v1;
-			sourceTree = "<group>";
-		};
-		956985941DEC2128005D2499 /* platforms */ = {
-			isa = PBXGroup;
-			children = (
-				956985951DEC2128005D2499 /* asio */,
-				9569859D1DEC2128005D2499 /* Config.hpp */,
-				9569859E1DEC2128005D2499 /* darwin */,
-				956985A11DEC2128005D2499 /* linux */,
-				956985A31DEC2128005D2499 /* posix */,
-				956985A51DEC2128005D2499 /* stl */,
-				956985A71DEC2128005D2499 /* windows */,
-			);
-			path = platforms;
-			sourceTree = "<group>";
-		};
-		956985951DEC2128005D2499 /* asio */ = {
-			isa = PBXGroup;
-			children = (
-				956985961DEC2128005D2499 /* AsioService.hpp */,
-				956985971DEC2128005D2499 /* AsioTimer.hpp */,
-				956985981DEC2128005D2499 /* AsioWrapper.hpp */,
-				956985991DEC2128005D2499 /* Context.hpp */,
-				9569859A1DEC2128005D2499 /* PooledHandlerContext.hpp */,
-				9569859B1DEC2128005D2499 /* Socket.hpp */,
-				9569859C1DEC2128005D2499 /* Util.hpp */,
-			);
-			path = asio;
-			sourceTree = "<group>";
-		};
-		9569859E1DEC2128005D2499 /* darwin */ = {
-			isa = PBXGroup;
-			children = (
-				9569859F1DEC2128005D2499 /* Clock.hpp */,
-				956985A01DEC2128005D2499 /* Darwin.hpp */,
-			);
-			path = darwin;
-			sourceTree = "<group>";
-		};
-		956985A11DEC2128005D2499 /* linux */ = {
-			isa = PBXGroup;
-			children = (
-				956985A21DEC2128005D2499 /* Linux.hpp */,
-			);
-			path = linux;
-			sourceTree = "<group>";
-		};
-		956985A31DEC2128005D2499 /* posix */ = {
-			isa = PBXGroup;
-			children = (
-				956985A41DEC2128005D2499 /* ScanIpIfAddrs.hpp */,
-			);
-			path = posix;
-			sourceTree = "<group>";
-		};
-		956985A51DEC2128005D2499 /* stl */ = {
-			isa = PBXGroup;
-			children = (
-				956985A61DEC2128005D2499 /* Clock.hpp */,
-			);
-			path = stl;
-			sourceTree = "<group>";
-		};
-		956985A71DEC2128005D2499 /* windows */ = {
-			isa = PBXGroup;
-			children = (
-				956985A81DEC2128005D2499 /* Clock.hpp */,
-				956985A91DEC2128005D2499 /* ScanIpIfAddrs.hpp */,
-			);
-			path = windows;
-			sourceTree = "<group>";
-		};
-		956985AA1DEC2128005D2499 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				956985AB1DEC2128005D2499 /* CatchWrapper.hpp */,
-				956985AC1DEC2128005D2499 /* serial_io */,
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
-		956985AC1DEC2128005D2499 /* serial_io */ = {
-			isa = PBXGroup;
-			children = (
-				956985AD1DEC2128005D2499 /* Context.hpp */,
-				956985AE1DEC2128005D2499 /* Fixture.hpp */,
-				956985AF1DEC2128005D2499 /* SchedulerTree.hpp */,
-				956985B01DEC2128005D2499 /* Socket.hpp */,
-				956985B11DEC2128005D2499 /* Timer.hpp */,
-			);
-			path = serial_io;
-			sourceTree = "<group>";
-		};
-		956985B21DEC2128005D2499 /* util */ = {
-			isa = PBXGroup;
-			children = (
-				956985B31DEC2128005D2499 /* Injected.hpp */,
-				956985B41DEC2128005D2499 /* Log.hpp */,
-				956985B51DEC2128005D2499 /* SafeAsyncHandler.hpp */,
-				956985B61DEC2128005D2499 /* SampleTiming.hpp */,
-				956985B71DEC2128005D2499 /* test */,
-			);
-			path = util;
-			sourceTree = "<group>";
-		};
-		956985B71DEC2128005D2499 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				956985B81DEC2128005D2499 /* IoService.hpp */,
-				956985B91DEC2128005D2499 /* Timer.hpp */,
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
-		95698B011DEC212B005D2499 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				95698B031DEC212B005D2499 /* ofxAbletonLink.h */,
-				95698F851DEC4106005D2499 /* ofxAbletonLinkThreaded.h */,
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				9569852C1DEC2128005D2499 /* ofxAbletonLink */,
+				8E42EE2029E05B360C7CC1FC /* ofxAbletonLink */,
 			);
 			name = addons;
+			sourceTree = "<group>";
+		};
+		D4273D1F7CFE8F39BD43AFB4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				55247C2E2C692B3C409EED04 /* ofxAbletonLinkThreaded.h */,
+				0B3F55C3B1770A3F48090C5E /* ofxAbletonLink.h */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		E4328144138ABC890047C5CB /* Products */ = {
@@ -465,7 +172,6 @@
 				Japanese,
 				French,
 				German,
-				en,
 			);
 			mainGroup = E4B69B4A0A3A1720003C02F2;
 			productRefGroup = E4B69B4A0A3A1720003C02F2;
@@ -551,9 +257,10 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
+					../../../addons/ofxAbletonLink/src,
 					../../../addons/ofxAbletonLink/libs/link/include,
+					../../../addons/ofxAbletonLink/libs/link/include/ableton,
 					"../../../addons/ofxAbletonLink/libs/link/modules/asio-standalone/asio/include",
-					../../../addons/ofxAbletonLink/libs/link/modules/catch/single_include,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
@@ -588,9 +295,10 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
+					../../../addons/ofxAbletonLink/src,
 					../../../addons/ofxAbletonLink/libs/link/include,
+					../../../addons/ofxAbletonLink/libs/link/include/ableton,
 					"../../../addons/ofxAbletonLink/libs/link/modules/asio-standalone/asio/include",
-					../../../addons/ofxAbletonLink/libs/link/modules/catch/single_include,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -615,13 +323,13 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
-				GCC_PREPROCESSOR_DEFINITIONS = "LINK_PLATFORM_MACOSX=1";
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
+					../../../addons/ofxAbletonLink/src,
 					../../../addons/ofxAbletonLink/libs/link/include,
+					../../../addons/ofxAbletonLink/libs/link/include/ableton,
 					"../../../addons/ofxAbletonLink/libs/link/modules/asio-standalone/asio/include",
-					../../../addons/ofxAbletonLink/libs/link/modules/catch/single_include,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
@@ -646,13 +354,13 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
-				GCC_PREPROCESSOR_DEFINITIONS = "LINK_PLATFORM_MACOSX=1";
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
+					../../../addons/ofxAbletonLink/src,
 					../../../addons/ofxAbletonLink/libs/link/include,
+					../../../addons/ofxAbletonLink/libs/link/include/ableton,
 					"../../../addons/ofxAbletonLink/libs/link/modules/asio-standalone/asio/include",
-					../../../addons/ofxAbletonLink/libs/link/modules/catch/single_include,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
