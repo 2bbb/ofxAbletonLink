@@ -7,14 +7,17 @@
 
 #pragma once
 
+#include <atomic>
+
 #include <ableton/Link.hpp>
 #include "ofEvent.h"
 #include "ofEvents.h"
 #include "ofEventUtils.h"
+#include "ofLog.h"
 
 namespace ofx {
     class AbletonLinkThreaded {
-        std::atomic<bool> finish{false};
+        std::atomic_bool finish{false};
         ableton::Link link;
         std::thread thread;
         
@@ -27,7 +30,7 @@ namespace ofx {
                 auto timeline = link.captureAppTimeline();
                 const auto beats = timeline.beatAtTime(time, 4.0);
                 const auto phase = timeline.phaseAtTime(time, 4.0);
-                std::cout << "info\n"
+                ofLogVerbose("ofxAbletonLinkThreaded") << "info\n"
                 << "  beats: " << beats << std::endl
                 << "  phase: " << phase << std::endl
                 << "  tempo: " << timeline.tempo() << std::endl
