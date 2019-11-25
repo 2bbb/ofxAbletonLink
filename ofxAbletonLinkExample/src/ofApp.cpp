@@ -11,13 +11,19 @@ class ofApp : public ofBaseApp {
     void numPeersChanged(std::size_t &peers) {
         ofLogNotice("numPeersChanged") << peers;
     }
+    
+    void playStateChanged(bool &state) {
+        ofLogNotice("playStateChanged") << (state ? "play" : "stop");
+    }
 public:
     void setup() {
+        link.setup();
         ofSetBackgroundColor(0, 0, 0);
         ofSetVerticalSync(true);
         ofSetFrameRate(60);
         ofAddListener(link.bpmChanged, this, &ofApp::bpmChanged);
         ofAddListener(link.numPeersChanged, this, &ofApp::numPeersChanged);
+        ofAddListener(link.playStateChanged, this, &ofApp::playStateChanged);
     }
     
     void draw() {
@@ -31,7 +37,8 @@ public:
             << "bpm:   " << link.getBPM() << std::endl
             << "beat:  " << link.getBeat() << std::endl
             << "phase: " << link.getPhase() << std::endl
-            << "peers: " << link.getNumPeers() << std::endl;
+            << "peers: " << link.getNumPeers() << std::endl
+            << "play?: " << (link.isPlaying() ? "play" : "stop");
         
         ofSetColor(255);
         ofDrawBitmapString(ss.str(), 20, 20);
@@ -45,6 +52,8 @@ public:
             link.setBeat(0.0);
         } else if(key == 'B') {
             link.setBeatForce(0.0);
+        } else if(key == ' ') {
+            link.setIsPlaying(!link.isPlaying());
         }
     }
 };
