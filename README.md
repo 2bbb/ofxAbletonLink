@@ -4,16 +4,14 @@
 
 ## Test
 
-* OSX Yosemite 10.10.5
-* Xcode 7.2
-* oF0.9.6 osx release
+* OSX Yosemite 10.14.6
+* Xcode 11.2
+* oF0.10.1 osx release
 
 ## Setup
 
 ```
-git clone git@github.com:2bbb/ofxAbletonLink.git
-cd ofxAbletonLink
-git submodule update --init --recursive
+git clone --recursive git@github.com:2bbb/ofxAbletonLink.git
 ```
 
 ### if you don't use ProjectGenerator
@@ -26,6 +24,12 @@ git submodule update --init --recursive
   * __!!! DON'T add other files to project__
 
 ## Update histor
+
+### 2019/11/25 ver 0.0.3
+
+* update version of ableton link to [20496fa142efc27bfe4abf939126d820df998cab](https://github.com/Ableton/link/tree/20496fa142efc27bfe4abf939126d820df998cab)
+* add ofxAbletonLinkSetting for construct / setup
+* implement features about sync play state. (what abletonlink named playStop)
 
 ### 2018/05/21 ver 0.0.2
 
