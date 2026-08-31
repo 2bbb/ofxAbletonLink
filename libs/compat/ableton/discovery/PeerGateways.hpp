@@ -23,7 +23,7 @@
 // C++17+: std::invoke_result. Older OF (C++11/14): std::result_of.
 // Drop this file when bumping the Ableton Link submodule past that change.
 
-#include "../../ofxAbletonLink_cxx.hpp"
+#include "ofxAbletonLink_cxx.hpp"
 #include <ableton/discovery/InterfaceScanner.hpp>
 #include <ableton/platforms/asio/AsioWrapper.hpp>
 #include <map>

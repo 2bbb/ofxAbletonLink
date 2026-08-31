@@ -17,7 +17,7 @@
 #   define LINK_PLATFORM_WINDOWS 1
 #endif
 
-#include "../libs/compat/ofxAbletonLink_cxx.hpp"
+#include "ofxAbletonLink_cxx.hpp"
 
 // Asio 1.14 only sets ASIO_HAS_STD_INVOKE_RESULT on MSVC. On C++20+
 // `using std::result_of` is invalid, so enable invoke_result there.
