@@ -29,10 +29,7 @@ namespace ofx {
         double bpm{120.0};
         double quantum{4.0};
         bool is_playing{false};
-        // The events object `update` was registered on, cached so the
-        // destructor removes the listener from the SAME object even if the
-        // window (and with it what ofEvents() returns) is gone by then.
-        ofCoreEvents *registeredEvents{nullptr};
+        ofCoreEvents *registeredEvents{nullptr}; // same ofEvents instance for add/remove listener
 
     public:
         ofEvent<double> bpmChanged;
@@ -40,15 +37,7 @@ namespace ofx {
         ofEvent<bool> playStateChanged;
 
     private:
-        // Declared LAST deliberately: members destroy in reverse declaration
-        // order, so ~ableton::Link - which drains and joins Link's io
-        // thread - runs while the ofEvent members above are still alive.
-        // With link declared first (the upstream layout), an async
-        // tempo/peers/start-stop callback could fire into an
-        // already-destroyed ofEvent during teardown: a use-after-free that
-        // surfaces as heap corruption under a debugger and is latent at app
-        // shutdown whenever a tempo change is in flight.
-        ableton::Link link;
+        ableton::Link link; // last: ~Link joins io thread while ofEvents are still alive
 
     public:
 
@@ -90,16 +79,10 @@ namespace ofx {
         };
 
         ~AbletonLink() {
-            // Detach Link's callbacks before ANY member destruction begins.
-            // The setters and the callback trampolines share Link's internal
-            // callback mutex, so once each setter returns the old callback
-            // (which captures `this`) can never be entered again.
+            // detach Link callbacks that capture this
             link.setTempoCallback([](double) {});
             link.setNumPeersCallback([](std::size_t) {});
             link.setStartStopCallback([](bool) {});
-            // Also unhook the per-frame update listener - registering in the
-            // constructor and never removing leaked a dangling `this` on the
-            // events object for every instance ever created.
             if (registeredEvents != nullptr) {
                 ofRemoveListener(registeredEvents->update, this, &AbletonLink::update, OF_EVENT_ORDER_BEFORE_APP);
             }
