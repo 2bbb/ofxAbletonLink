@@ -20,8 +20,8 @@ make -C testApp Debug OF_ROOT=/path/to/openFrameworks
 make -C testApp RunDebug OF_ROOT=/path/to/openFrameworks
 ```
 
-GitHub Actions runs the same tests with openFrameworks 0.12.1 on macOS, Linux,
-and Windows.
+GitHub Actions runs the same tests with openFrameworks 0.12.1 using macOS Make,
+macOS Xcode, Linux Make, and Windows Visual Studio builds.
 
 ## Setup
 
