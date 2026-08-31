@@ -33,18 +33,23 @@
 
 namespace ofx {
     class AbletonLink {
-        ableton::Link link;
         double beat{0.0};
         double phase{0.0};
         double bpm{120.0};
         double quantum{4.0};
         bool is_playing{false};
-        
+        ofCoreEvents *registeredEvents{nullptr}; // same ofEvents instance for add/remove listener
+
     public:
         ofEvent<double> bpmChanged;
         ofEvent<std::size_t> numPeersChanged;
         ofEvent<bool> playStateChanged;
-        
+
+    private:
+        ableton::Link link; // last: ~Link joins io thread while ofEvents are still alive
+
+    public:
+
         struct Setting {
             Setting(double bpm = 120.0,
                     double quantum = 4.0,
@@ -62,13 +67,13 @@ namespace ofx {
             bool playStateSync{true};
         };
         AbletonLink(const Setting &setting = {})
-        : link(setting.bpm)
-        , bpm(setting.bpm)
+        : bpm(setting.bpm)
         , quantum(setting.quantum)
+        , link(setting.bpm)
         {
             setEnable(setting.enable);
             setPlayStateSync(setting.playStateSync);
-            
+
             link.setTempoCallback([&](double bpm) {
                 ofNotifyEvent(bpmChanged, bpm);
             });
@@ -78,9 +83,20 @@ namespace ofx {
             link.setStartStopCallback([this](bool isPlaying) {
                 ofNotifyEvent(playStateChanged, isPlaying);
             });
-            ofAddListener(ofEvents().update, this, &AbletonLink::update, OF_EVENT_ORDER_BEFORE_APP);
+            registeredEvents = &ofEvents();
+            ofAddListener(registeredEvents->update, this, &AbletonLink::update, OF_EVENT_ORDER_BEFORE_APP);
         };
-        
+
+        ~AbletonLink() {
+            // detach Link callbacks that capture this
+            link.setTempoCallback([](double) {});
+            link.setNumPeersCallback([](std::size_t) {});
+            link.setStartStopCallback([](bool) {});
+            if (registeredEvents != nullptr) {
+                ofRemoveListener(registeredEvents->update, this, &AbletonLink::update, OF_EVENT_ORDER_BEFORE_APP);
+            }
+        };
+
         OF_DEPRECATED_MSG("Use ofxAbletonLink(const ofxAbletonLinkSetting &)", AbletonLink(double bpm, double quantum = 4.0, bool enable = true))
         : AbletonLink(Setting{bpm, quantum, enable, true})
         {};
