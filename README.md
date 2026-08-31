@@ -10,9 +10,19 @@
 
 ## Setup
 
-```
+```bash
 git clone --recursive git@github.com:2bbb/ofxAbletonLink.git
+cd ofxAbletonLink
+git submodule update --init --recursive
+cd libs/link
+git checkout Link-3.1.5
+git submodule update --init --recursive
 ```
+
+### Requirements
+
+* C++14 or later (C++17 recommended)
+* Ableton Link 3.1.5
 
 ### if you don't use ProjectGenerator
 
@@ -22,8 +32,14 @@ git clone --recursive git@github.com:2bbb/ofxAbletonLink.git
 * add project
   * ofxAbletonLink/src/ofxAbletonLink.h
   * __!!! DON'T add other files to project__
+* set C++ Language Standard to C++14 or higher
 
-## Update histor
+## Update history
+
+### 2025/12/31 ver 0.0.4
+
+* update version of ableton link to 3.1.5 (Link-3.1.5)
+* requires C++14 or later
 
 ### 2019/11/25 ver 0.0.3
 
