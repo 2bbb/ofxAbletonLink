@@ -8,6 +8,21 @@
 * Xcode 11.2
 * oF0.10.1 osx release
 
+### Automated tests
+
+`testApp` runs no-window unit tests for the public settings API and verifies
+that constructing and destroying `ofxAbletonLink` adds and removes exactly one
+openFrameworks update listener. Its Make build uses C++20 to exercise the
+`std::result_of` compatibility layer.
+
+```sh
+make -C testApp Debug OF_ROOT=/path/to/openFrameworks
+make -C testApp RunDebug OF_ROOT=/path/to/openFrameworks
+```
+
+GitHub Actions runs the same tests with openFrameworks 0.12.1 using macOS Make,
+macOS Xcode, Linux Make, and Windows Visual Studio builds.
+
 ## Setup
 
 ```

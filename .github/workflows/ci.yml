@@ -1,0 +1,21 @@
+name: openFrameworks addon CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    uses: 2bbb/of-actions/.github/workflows/build-addon.yml@1675fca03a831c2c70b114f351c35b17f339fe9f
+    with:
+      of_version: "0.12.1"
+      addon_name: "ofxAbletonLink"
+      test_app: "testApp"
+      configs: '["Debug"]'
+      test_mode: "test"
