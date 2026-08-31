@@ -32,6 +32,7 @@ common:
 	# but if the addon or addon libraries need special search paths they can be
 	# specified here separated by spaces or one per line using +=
 	ADDON_INCLUDES  = src
+	ADDON_INCLUDES += libs/compat
 	ADDON_INCLUDES += libs/link/include
 	ADDON_INCLUDES += libs/link/include/ableton
 	ADDON_INCLUDES += libs/link/modules/asio-standalone/asio/include

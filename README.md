@@ -17,13 +17,31 @@ git clone --recursive git@github.com:2bbb/ofxAbletonLink.git
 ### if you don't use ProjectGenerator
 
 * add header search path
+  * ofxAbletonLink/libs/compat
   * ofxAbletonLink/libs/link/include
   * ofxAbletonLink/libs/link/modules/asio-standalone/asio/include
 * add project
   * ofxAbletonLink/src/ofxAbletonLink.h
   * __!!! DON'T add other files to project__
 
+## C++ dialect
+
+The bundled Ableton Link (2019) uses `std::result_of` in `PeerGateways.hpp`. That trait was removed in C++20; `std::invoke_result` arrived in C++17.
+
+`libs/compat` (first include path) shadows `PeerGateways.hpp` and picks the trait from the language mode:
+
+* C++11 / C++14 (OF 0.10–0.11): `std::result_of`
+* C++17+: `std::invoke_result`
+
+On C++20+ only, `ofxAbletonLink.h` also sets `ASIO_HAS_STD_INVOKE_RESULT` so Asio 1.14 does not `using std::result_of` (Asio enables that itself on MSVC already). Older dialects are left alone so C++11/14 OF projects keep building.
+
+Drop `libs/compat` when bumping the `libs/link` submodule to a Link release that already uses `invoke_result`.
+
 ## Update histor
+
+### 2026/08/31 ver 0.0.4
+
+* C++20/23: `std::invoke_result` when the dialect is C++17+; keep `std::result_of` for older OF. Asio `ASIO_HAS_STD_INVOKE_RESULT` only on C++20+.
 
 ### 2019/11/25 ver 0.0.3
 

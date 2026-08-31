@@ -17,6 +17,15 @@
 #   define LINK_PLATFORM_WINDOWS 1
 #endif
 
+#include "ofxAbletonLink_cxx.hpp"
+
+// Asio 1.14 only sets ASIO_HAS_STD_INVOKE_RESULT on MSVC. On C++20+
+// `using std::result_of` is invalid, so enable invoke_result there.
+// Leave older dialects alone: result_of still exists, invoke_result may not.
+#if defined(OFXABLETONLINK_NO_STD_RESULT_OF) && !defined(ASIO_HAS_STD_INVOKE_RESULT)
+#   define ASIO_HAS_STD_INVOKE_RESULT 1
+#endif
+
 #include <ableton/Link.hpp>
 #include "ofEvent.h"
 #include "ofEvents.h"
