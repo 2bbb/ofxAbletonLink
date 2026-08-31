@@ -36,7 +36,6 @@ common:
 	ADDON_INCLUDES += libs/link/include
 	ADDON_INCLUDES += libs/link/include/ableton
 	ADDON_INCLUDES += libs/link/modules/asio-standalone/asio/include
-	ADDON_DEFINES += ASIO_HAS_STD_INVOKE_RESULT
 	
 	# any special flag that should be passed to the compiler when using this
 	# addon

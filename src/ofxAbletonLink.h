@@ -17,9 +17,12 @@
 #   define LINK_PLATFORM_WINDOWS 1
 #endif
 
-// Asio 1.14 only sets this on MSVC. C++20 removed std::result_of, so
-// asio/detail/type_traits.hpp's `using std::result_of` fails elsewhere.
-#ifndef ASIO_HAS_STD_INVOKE_RESULT
+#include "../libs/compat/ofxAbletonLink_cxx.hpp"
+
+// Asio 1.14 only sets ASIO_HAS_STD_INVOKE_RESULT on MSVC. On C++20+
+// `using std::result_of` is invalid, so enable invoke_result there.
+// Leave older dialects alone: result_of still exists, invoke_result may not.
+#if defined(OFXABLETONLINK_NO_STD_RESULT_OF) && !defined(ASIO_HAS_STD_INVOKE_RESULT)
 #   define ASIO_HAS_STD_INVOKE_RESULT 1
 #endif
 

@@ -19,14 +19,17 @@
 
 #pragma once
 
-// Overlay of libs/link/include/ableton/discovery/PeerGateways.hpp for C++20+.
-// std::result_of was removed in C++20; use std::invoke_result. Drop this
-// file when bumping the Ableton Link submodule past that change.
+// Overlay of libs/link/include/ableton/discovery/PeerGateways.hpp.
+// C++17+: std::invoke_result. Older OF (C++11/14): std::result_of.
+// Drop this file when bumping the Ableton Link submodule past that change.
 
+#include "../../ofxAbletonLink_cxx.hpp"
 #include <ableton/discovery/InterfaceScanner.hpp>
 #include <ableton/platforms/asio/AsioWrapper.hpp>
 #include <map>
+#if defined(OFXABLETONLINK_HAS_INVOKE_RESULT)
 #include <type_traits>
+#endif
 
 namespace ableton
 {
@@ -40,10 +43,15 @@ class PeerGateways
 {
 public:
   using IoType = typename util::Injected<IoContext>::type;
+#if defined(OFXABLETONLINK_HAS_INVOKE_RESULT)
   using Gateway = typename std::invoke_result<GatewayFactory,
     NodeState,
     util::Injected<IoType&>,
     asio::ip::address>::type;
+#else
+  using Gateway = typename std::result_of<GatewayFactory(
+    NodeState, util::Injected<IoType&>, asio::ip::address)>::type;
+#endif
   using GatewayMap = std::map<asio::ip::address, Gateway>;
 
   PeerGateways(const std::chrono::seconds rescanPeriod,
