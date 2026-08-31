@@ -17,13 +17,29 @@ git clone --recursive git@github.com:2bbb/ofxAbletonLink.git
 ### if you don't use ProjectGenerator
 
 * add header search path
+  * ofxAbletonLink/libs/compat
   * ofxAbletonLink/libs/link/include
   * ofxAbletonLink/libs/link/modules/asio-standalone/asio/include
 * add project
   * ofxAbletonLink/src/ofxAbletonLink.h
   * __!!! DON'T add other files to project__
 
+## C++20 / C++23
+
+openFrameworks 0.12.1+ compiles as C++23. The bundled Ableton Link (2019) still uses `std::result_of`, which was removed in C++20 (`PeerGateways.hpp`, plus Asio's `using std::result_of` on non-MSVC).
+
+This addon:
+
+* shadows `PeerGateways.hpp` with `std::invoke_result` via `libs/compat` (first include path)
+* defines `ASIO_HAS_STD_INVOKE_RESULT` before including Link so Asio 1.14 does not pull `std::result_of`
+
+Drop `libs/compat` when bumping the `libs/link` submodule to a Link release that already uses `invoke_result`.
+
 ## Update histor
+
+### 2026/08/31 ver 0.0.4
+
+* C++20/23: replace `std::result_of` (Ableton Link + Asio) so the addon builds with OF 0.12.1 / VS `stdcpp23`
 
 ### 2019/11/25 ver 0.0.3
 

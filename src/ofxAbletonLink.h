@@ -17,6 +17,12 @@
 #   define LINK_PLATFORM_WINDOWS 1
 #endif
 
+// Asio 1.14 only sets this on MSVC. C++20 removed std::result_of, so
+// asio/detail/type_traits.hpp's `using std::result_of` fails elsewhere.
+#ifndef ASIO_HAS_STD_INVOKE_RESULT
+#   define ASIO_HAS_STD_INVOKE_RESULT 1
+#endif
+
 #include <ableton/Link.hpp>
 #include "ofEvent.h"
 #include "ofEvents.h"
